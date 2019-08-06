@@ -1,0 +1,8 @@
+<div class="container my-3">
+	<h1>Voici le potin n°<%= @self.id %>: </h1>
+	<ul>
+		<li><%= @self.title %></li>
+		<li><%= @self.content %></li>
+	</ul>
+	<%= link_to "Voir l'utilisateur qui à posté ce potin", user_path(@self.id) %>
+</div>

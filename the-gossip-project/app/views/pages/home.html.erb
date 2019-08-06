@@ -1,0 +1,19 @@
+<div class="container my-3">
+	<h1>Bienvenido, el amigo</h1>
+	<h4>Voici notre liste de potins : </h4>
+	<ul>
+	<div class="row d-flex justify-content-start">
+	<% @potins.each do |potin| %>
+	<div class="col-md-6 col-lg-4">
+		<div class="card" style="width: 18rem;">
+  			<div class="card-body">
+    			<h5 class="card-title"><%= potin.title %></h5>
+   				<h6 class="card-subtitle mb-2 text-muted">Id n°<%= potin.id %></h6>
+    			<p class="card-text"><%= potin.content %></p>
+    			<%= link_to "Voir le potin", potins_id_path(potin.id) %>
+  			</div>
+		</div>
+	</div>
+	<% end %></div>
+	</ul>
+</div>
